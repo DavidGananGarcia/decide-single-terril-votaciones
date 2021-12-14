@@ -70,7 +70,7 @@ MODULES = [
     'voting',
 ]
 
-BASEURL = 'https://decide-single-terril.herokuapp.com'
+BASEURL = 'https://terril.herokuapp.com/'
 
 
 MIDDLEWARE = [
