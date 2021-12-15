@@ -38,7 +38,7 @@ jobs:
     - name: Codacy Coverage Reporter
       uses: codacy/codacy-coverage-reporter-action@v1.1.0
       with:
-          project-token: {secret.CODACY_PROJECT_TOKEN}
+          project-token: ${{secret.CODACY_PROJECT_TOKEN}}
 
           coverage-reports: decide/coverage.xml
   deploy:
@@ -47,6 +47,6 @@ jobs:
     - uses: actions/checkout@v1
     - uses: akhileshns/heroku-deploy@v3.12.12 # This is the action
       with:
-          heroku_api_key: {secret.HEROKU_API_KEY}
+          heroku_api_key: ${{secret.HEROKU_API_KEY}}
           heroku_app_name: "terril"
           heroku_email: "davgangar1@alum.us.es"
